@@ -10,35 +10,37 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-primary">
-        <a class="navbar-brand" href="#"><h1 class="text-center">Password Generator</h1></a>
+        <a class="navbar-brand" href="#"><h1 class="text-center">Random Password Generator</h1></a>
       </nav>
 
     <div class="container">
-        <h1 id="title">Random Password Generator</h1>
+        <h1 id="title">Password Generator</h1>
         <br>
-        <input type="text" id="passwordDisplay">
+        <div class="results-container">
+            <input type="text" id="results">
+        </div>
         <br>
         <form id="passwordGenerator" class="form">
             <label for="length">Number of Characters</label>
             <div id="charContainer">
-                <input type="number" min="1" max="128" value="12" id="charLength">
+                <input type="number" min="1" max="128" value="12" id="length">
             </div>
             <br>
             <div class="checkbox">
-                <input type="checkbox" id="includeNumbers">
+                <input type="checkbox" checked id="numbers">
                 <label for="numbers">Include Numbers</label>
 
-                <input type="checkbox" id="includeSymbols">
+                <input type="checkbox" checked id="symbols">
                 <label for="symbols">Include Symbols</label>
             <br>
-                <input type="checkbox" id="includeUppercase">
+                <input type="checkbox" checked  id="uppercase">
                 <label for="uppercase">Include Uppercase</label>
 
-                <input type="checkbox" id="includeLowercase">
+                <input type="checkbox" checked id="lowercase">
                 <label for="lowercase">Include Lowercase</label>
             </div>
             <br>
-            <button onclick="" type="submit" class="btn btn-primary btn-lg">Generate</button>
+            <button id="generate" class="btn btn-primary btn-lg">Generate</button>
 
 
         </form>
